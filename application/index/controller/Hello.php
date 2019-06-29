@@ -7,8 +7,13 @@ use think\Controller;
 class Hello extends Controller
 {
     //
-    public function index()
+    public function index($name="test")
     {
-        return 'Hello,ThinkPHP!!!';
+        return 'Hello,' . $name . '!';
+    }
+
+    public function tes($name='tes!!!')
+    {
+         return '测试路由参数name = ' . $name; 
     }
 }
